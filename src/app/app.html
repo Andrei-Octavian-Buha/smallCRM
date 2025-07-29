@@ -1,25 +1,28 @@
 <mat-drawer-container class="sidenavContainer">
   <mat-drawer mode="side" [opened]="this.sideBarOpen" class="sidenav">
     <div class="logo-container">Place for logo</div>
-    <ul class="items-center pl-[0px] ">
-      <li class="px-[16px] h-[48px] flex items-center gap-[16px]" routerLink="dashboard"><mat-icon>fact_check</mat-icon> Dashboard</li>
-      <li class="px-[16px] h-[48px] flex  items-center gap-[16px]" routerLink="user"><mat-icon>perm_identity</mat-icon>User</li>
+    <ul class="items-center pl-[0px]">
+      <li class="px-[16px] h-[48px] flex items-center gap-[16px]" routerLink="dashboard">
+        <mat-icon>fact_check</mat-icon> Dashboard
+      </li>
+      <li class="px-[16px] h-[48px] flex items-center gap-[16px]" routerLink="user">
+        <mat-icon>perm_identity</mat-icon>User
+      </li>
     </ul>
   </mat-drawer>
 
-  <div class="flex flex-col">
-  <mat-toolbar class="bg-regal-blue" color="primary">
-    <button
-      matIconButton
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-      (click)="toggleSideBar()"
-    >
-      <mat-icon class="cursor-pointer">menu</mat-icon>
-    </button>
-    <span class="font-bold text-5xl">Small CRM</span>
-  </mat-toolbar>
-   <router-outlet></router-outlet> 
+  <div class="flex flex-col ">
+    <mat-toolbar class="" color="primary">
+      <button matIconButton class="cursor-pointer " aria-label="Example icon-button with menu icon"
+        (click)="toggleSideBar()">
+        <mat-icon class="burgerMenu">menu</mat-icon>
+      </button>
+      <span class="font-bold text-5xl text-white">Small CRM</span>
+    </mat-toolbar>
+    <router-outlet class="p-[16px]"></router-outlet>
   </div>
-
+  <button matFab enabled class="add-user-bottom" matTooltip="Add User" [matTooltipPosition]="position.value!"
+    (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
 </mat-drawer-container>

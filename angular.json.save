@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "smallcrm": {
+    "SmallCRM": {
       "projectType": "application",
        "schematics": {
         "@schematics/angular:component": { "type": "component","style": "scss"},
@@ -23,8 +23,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
+            "polyfills": [              "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",

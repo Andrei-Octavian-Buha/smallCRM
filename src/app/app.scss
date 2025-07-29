@@ -1,15 +1,33 @@
-.sidenav{
-    width: 300px;
+.sidenav {
+  width: 300px;
+}
 
+.sidenavContainer {
+  position: relative;
+  height: 100vh;
 }
-.sidenavContainer{
-    height: 100vh;
+
+.logo-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  min-height: 64px;
 }
-.logo-container{
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-            padding: 16px;
-            min-height: 64px; 
+
+mat-toolbar {
+  min-height: 64px;
+  background-color: #4b0082;
 }
-mat-toolbar{
-    min-height: 64px;
-} 
+
+mat-drawer {
+  border-right: 1px solid
+}
+
+.burgerMenu {
+  color: white
+}
+
+.add-user-bottom {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
