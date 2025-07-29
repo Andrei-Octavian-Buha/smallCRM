@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
-import { MainContent } from './main-content/main-content';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserComponent } from './user/user.component';
 export const routes: Routes = [
-       {   path: '', 
-            component: MainContent,
+
+               {   path: 'dashboard', 
+            component: DashboardComponent,
             title: 'Home -',
         },
+               {   path: 'user', 
+            component: UserComponent,
+            title: 'Home -',
+        }
 ];
