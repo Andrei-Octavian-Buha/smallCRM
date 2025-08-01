@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, model, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { DialogAddUserComponent } from './dialog-add-user/dialog-add-user.component';
+import { DialogAddUserComponent } from './dialogs/dialog-add-user/dialog-add-user.component';
 import { User } from './models/user.class';
 
 
@@ -21,7 +21,6 @@ import { User } from './models/user.class';
   imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, CommonModule, RouterModule, MatTooltipModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule,MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
 
@@ -43,12 +42,15 @@ export class App {
     const dialogRef = this.dialog.open(DialogAddUserComponent, {
       data: { animal: this.animal()},
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       if (result !== undefined) {
         this.animal.set(result);
       }
     });
+  }
+
+  closeSideBar(){
+      this.sideBarOpen = false;
   }
 }

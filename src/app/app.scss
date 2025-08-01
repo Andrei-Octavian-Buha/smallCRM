@@ -19,7 +19,9 @@ mat-toolbar {
 }
 
 mat-drawer {
-  border-right: 1px solid
+  border-radius: 0;
+  border-right: 1px solid;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .burgerMenu {
@@ -31,3 +33,9 @@ mat-drawer {
   bottom: 16px;
   right: 16px;
 }
+.logo{
+  background-image: url(/assets/img/logo.png);
+  background-size: cover;
+  background-position: center;
+}
+
